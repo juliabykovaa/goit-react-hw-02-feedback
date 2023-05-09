@@ -1,5 +1,6 @@
 import { React, Component } from 'react';
 import PropTypes from 'prop-types';
+import { StatisticList } from './RateStatistics.styled';
 
 export class Statistics extends Component {
   render() {
@@ -12,13 +13,13 @@ export class Statistics extends Component {
           <>{children}</>
         ) : (
           <>
-            <ul>
+            <StatisticList>
               <li>Good: {good}</li>
               <li>Neutral: {neutral}</li>
               <li>Bad: {bad}</li>
               <li>Total: {totalFeedback}</li>
               <li>Positive Feedback: {positivePercentage}%</li>
-            </ul>
+            </StatisticList>
           </>
         )}
       </>

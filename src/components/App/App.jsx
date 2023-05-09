@@ -3,6 +3,7 @@ import { FeedbackRates } from 'components/FeedbackRates/FeedbackRates';
 import { Statistics } from 'components/Statistics/RateStatistics';
 import { Title } from 'components/Title/Title';
 import { Notification } from 'components/EmptyNotification/EmptyNotification';
+import {Section} from './App.styled'
 
 export class App extends Component {
   state = {
@@ -30,7 +31,7 @@ export class App extends Component {
   };
   render() {
     return (
-      <>
+      <Section>
         <Title title={'Feedback'}>
           <FeedbackRates onLeaveFeedback={this.handleReviewClick} />
           <Statistics
@@ -43,7 +44,7 @@ export class App extends Component {
             <Notification message="There is no feedback" />
           </Statistics>
         </Title>
-      </>
+      </Section>
     );
   }
 }

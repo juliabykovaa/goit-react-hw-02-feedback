@@ -1,23 +1,29 @@
 import { React, Component } from 'react';
+import { RateList, Button } from './FeedbackRates.styled';
+
 
 export class FeedbackRates extends Component {
   render() {
     const { onLeaveFeedback } = this.props;
     return (
       <div>
-        <ul>
+        <RateList>
           <li>
-            <button name="good" onClick={onLeaveFeedback}>
+            <Button name="good" onClick={onLeaveFeedback}>
               Good
-            </button>
-            <button name="neutral" onClick={onLeaveFeedback}>
-              Neutral
-            </button>
-            <button name="bad" onClick={onLeaveFeedback}>
-              Bad
-            </button>
+            </Button>
           </li>
-        </ul>
+          <li>
+            <Button name="neutral" onClick={onLeaveFeedback}>
+              Neutral
+            </Button>
+          </li>
+          <li>
+            <Button name="bad" onClick={onLeaveFeedback}>
+              Bad
+            </Button>
+          </li>
+        </RateList>
       </div>
     );
   }
